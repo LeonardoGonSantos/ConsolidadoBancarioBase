@@ -14,6 +14,10 @@ namespace Infra.Data.Context
         {
             _logger = Log.ForContext<SqlContext>();
         }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(SqlContext).Assembly);
+        }
 
         private async Task Salvar()
         {

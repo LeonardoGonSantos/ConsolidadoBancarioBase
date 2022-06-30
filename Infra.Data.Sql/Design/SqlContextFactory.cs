@@ -8,7 +8,7 @@ namespace Infra.Data.Sql.Design
     {
         public SqlContext CreateDbContext(string[] args)
         {
-            string connectionString = @"sqlConnection";
+            string connectionString = @"Server=tcp:consolidadobancario.database.windows.net,1433;Initial Catalog=consolidadobancario;Persist Security Info=False;User ID=consolidadoApp;Password=#appConsolidado123#;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
             var optionsBuilder = new DbContextOptionsBuilder<SqlContext>();
             optionsBuilder.UseSqlServer(connectionString);
 

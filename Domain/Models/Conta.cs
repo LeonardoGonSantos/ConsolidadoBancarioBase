@@ -1,12 +1,12 @@
-﻿using System;
+﻿using ConsolidadoBancarioBase.Domain.Entities.Base;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace ConsolidadoBancario.Base.Domain.Models
 {
-    public class Conta
+    public class Conta : EntidadeBase
     {
-        public int Id { get; set; }
         public int ClientId { get; set; }
         public virtual Cliente Cliente { get; set; }
         public int Numero { get; set; }
